@@ -7,8 +7,8 @@ ENV PYTHONUNBUFFERED=1
 
 RUN pip install --upgrade pip
 
-RUN pip install valutes-protobuf
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+RUN pip install -U valutes-protobuf
 
 COPY . .
