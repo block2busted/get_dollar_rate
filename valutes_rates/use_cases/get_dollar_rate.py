@@ -4,8 +4,10 @@ import xmltodict
 import json
 from .constants import DOLLAR_ID
 
+from valutes_protobuf import get_dollar_rate_pb2
 
-async def get_dollar_rate() -> float:
+
+async def get_dollar_rate() -> get_dollar_rate_pb2.GetDollarRateResponse:
     async with aiohttp.ClientSession() as session:
         async with session.get(
                 'http://www.cbr.ru/scripts/XML_daily.asp'
@@ -26,4 +28,6 @@ async def get_dollar_rate() -> float:
                 for valute
                 in json_body['ValCurs']['Valute']
             }[DOLLAR_ID]
-            return float(dollar_rate.replace(',', '.'))
+            return get_dollar_rate_pb2.GetDollarRateResponse(
+                value_rate=float(dollar_rate.replace(',', '.'))
+            )

@@ -6,15 +6,14 @@ from valutes_protobuf import get_dollar_rate_pb2, get_dollar_rate_twirp
 from settings import GRPC_HOST, GRPC_PORT
 
 
-client = get_dollar_rate_twirp.GetDollarServicesClient(
+client = get_dollar_rate_twirp.GetRateClient(
     address=f'{GRPC_HOST}:{GRPC_PORT}'
 )
-
 
 try:
     response = client.GetDollarRate(
         ctx=Context(),
-        request=get_dollar_rate_pb2.GetDollarRequest()
+        request=get_dollar_rate_pb2.GetDollarRateRequest()
     )
     print(response)
 except TwirpServerException as e:
