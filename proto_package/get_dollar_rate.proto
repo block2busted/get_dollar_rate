@@ -1,0 +1,15 @@
+syntax = 'proto3';
+
+message GetDollarRequest {
+ 
+}
+
+message GetDollarResponse {
+  float value_rate = 1;
+}
+
+
+service GetDollarServices {
+ rpc GetDollarRate(GetDollarRequest) returns(GetDollarResponse);
+}
+
