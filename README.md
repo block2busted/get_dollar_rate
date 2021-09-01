@@ -26,3 +26,8 @@ pip install -r valutes_rates/requirements.txt
 pip install valutes-protobuf
 python3 client.py  # value_rate: ***
 ```
+
+For run pytest use command
+```
+ python -m pytest
+```
