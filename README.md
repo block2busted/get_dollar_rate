@@ -24,7 +24,7 @@ python3 -m venv env
 source env/bin/activate
 pip install -r valutes_rates/requirements.txt
 pip install valutes-protobuf
-python3 client.py  # value_rate: ***
+python3 valutes_rates/client.py  # value_rate: ***
 ```
 
 For run pytest use command
