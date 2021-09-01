@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ValCurs Date="01.09.2021" name="Foreign Currency Market">
+    <Valute ID="R01235">
+        <NumCode>840</NumCode>
+        <CharCode>USD</CharCode>
+        <Nominal>1</Nominal>
+        <Name>Доллар США</Name>
+        <Value>55,2781</Value>
+    </Valute>
+    <Valute ID="R01239">
+        <NumCode>978</NumCode>
+        <CharCode>EUR</CharCode>
+        <Nominal>1</Nominal>
+        <Name>Евро</Name>
+        <Value>86,6660</Value>
+    </Valute>
+    <Valute ID="R01270">
+        <NumCode>356</NumCode>
+        <CharCode>INR</CharCode>
+        <Nominal>10</Nominal>
+        <Name>Индийских рупий</Name>
+        <Value>10,0237</Value>
+    </Valute>
+</ValCurs>
